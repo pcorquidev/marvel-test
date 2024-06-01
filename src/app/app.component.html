@@ -3,8 +3,8 @@
   <p>Select a Character</p>
 </div>
 <div class="item-list">
-  <div *ngFor="let character of characters" class="item">
-    <img class="size-image" [src]="character.thumbnail" alt="{{ character.name }}">
+  <div *ngFor="let character of results" class="item">
+    <img class="size-image" [src]="character.thumbnail.path + '.' + character.thumbnail.extension" alt="{{ character.name }}">
     <p>{{ character.name }}</p>
   </div>
 </div>

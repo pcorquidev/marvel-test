@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from './models/character.model';
+import { CharacterService } from './services/character.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,11 @@ import { Character } from './models/character.model';
 })
 export class AppComponent implements OnInit {
   title = 'marvel-test'
-  constructor() {}
-  items: any [] = [];
+  constructor(private characterService: CharacterService) {}
+  items: any;
+  results: any[] = [];
+  thumbnail: string = "";
+
   characters: Character[] = [
     {
       id: 1,
@@ -23,7 +27,20 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  ngOnInit() {
-    //this.getCharacters();
+  ngOnInit(): void {
+    this.getCharacters();
   }
-}
+
+  public getCharacters(): void {
+    this.characterService
+              .getAllCharacters()
+              .subscribe(
+                  items => {
+                    this.items = items;
+                    this.results = items.data.results;
+                    //this.thumbnail = this.results.includes("thumbnail");
+                    console.log("characters = ",this.results);
+                  }
+    )
+  }
+ }
