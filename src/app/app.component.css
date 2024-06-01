@@ -1,0 +1,37 @@
+.item-list {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    width: 150px;
+  }
+  
+  .item img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  
+  .item p {
+    margin: 8px 0 0;
+    font-size: 1em;
+  }
+  
+  .centered-text {
+    margin-top: 3rem;
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold;  /* Pone el texto en negritas */
+  }
+  
+  .size-image {
+    width: 100px;
+    height: 150px
+  }
+  
