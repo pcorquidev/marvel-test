@@ -15,8 +15,8 @@ export class CharacterService {
   constructor(private http: HttpClient) { }
 
   // GET request all
-  getAllCharacters(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`)
+  getAllCharacters(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`)
       .pipe(
         catchError(this.handleError<any[]>('getItems', []))
       );
