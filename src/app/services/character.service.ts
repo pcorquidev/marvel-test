@@ -26,7 +26,7 @@ export class CharacterService {
     });
 
 
-    return this.http.get<any>(`${this.apiUrl}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`,
+    return this.http.get<any>(`${this.apiUrl}/characters`,
       {headers}
     )
       .pipe(
@@ -45,7 +45,7 @@ export class CharacterService {
       'Authorization': `Basic ${b64}` 
     });
 
-    return this.http.get<any>(`${this.apiUrl}/${id}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`
+    return this.http.get<any>(`${this.apiUrl}/characters/${id}`
       ,{headers}
     )
       .pipe(
