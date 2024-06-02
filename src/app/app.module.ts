@@ -7,18 +7,24 @@ import { PopupComponent } from './components/popup/popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BitacoraComponent } from './components/bitacora/bitacora.component';
+import { MatTableModule } from '@angular/material/table';
+import { AppRoutingModule } from './app-routing.module';
+import { SuperlistComponent } from './components/superlist/superlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopupComponent,
-    BitacoraComponent
+    BitacoraComponent,
+    SuperlistComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
