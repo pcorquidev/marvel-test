@@ -1,1 +1,21 @@
-<p>bitacora works!</p>
+<div>
+    <h2>Bitácora de Servicios</h2>
+    <table mat-table [dataSource]="bitacora" class="mat-elevation-z8">
+        <!-- Nombre del Servicio Column -->
+        <ng-container matColumnDef="servicio">
+            <th mat-header-cell *matHeaderCellDef> Nombre del Servicio </th>
+            <td mat-cell *matCellDef="let entry"> {{ entry.servicio }} </td>
+        </ng-container>
+
+        <!-- Fecha Column -->
+        <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <td mat-cell *matCellDef="let entry"> {{ entry.fecha }} </td>
+        </ng-container>
+
+        <!-- Header Row -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <!-- Data Rows -->
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
