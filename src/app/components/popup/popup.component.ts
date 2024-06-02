@@ -29,14 +29,13 @@ export class PopupComponent implements OnInit {
 
         }
     });
-    //throw new Error('Method not implemented.');
   }
   
     public information: Information = {
         id: 1,
-        name: "Wolverine",
-        description: "descripción",
-        imageUrl: "https://w0.peakpx.com/wallpaper/42/565/HD-wallpaper-wolverine-art-fantasy-hero-logan-marvel-sky-sun-war-x-men.jpg"
+        name: "",
+        description: "",
+        imageUrl: ""
     };
   
     public onClose(): void {

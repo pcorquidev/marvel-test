@@ -19,14 +19,9 @@ export class AppComponent implements OnInit {
   characters: Character[] = [
     {
       id: 1,
-      name: "Deadpool",
-      thumbnail: "https://i.pinimg.com/564x/a5/e7/f9/a5e7f9099965f33e3a51926daafcf0a8.jpg"
+      name: "",
+      thumbnail: ""
     },
-    {
-      id: 2,
-      name: "Wolverine",
-      thumbnail: "https://w0.peakpx.com/wallpaper/42/565/HD-wallpaper-wolverine-art-fantasy-hero-logan-marvel-sky-sun-war-x-men.jpg"
-    }
   ];
 
   ngOnInit(): void {
@@ -40,8 +35,6 @@ export class AppComponent implements OnInit {
                   items => {
                     this.items = items;
                     this.results = items.data.results;
-                    //this.thumbnail = this.results.includes("thumbnail");
-                    console.log("characters = ",this.results);
                   }
     )
   }
