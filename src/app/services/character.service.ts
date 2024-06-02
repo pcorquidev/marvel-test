@@ -16,7 +16,19 @@ export class CharacterService {
 
   // GET request all
   getAllCharacters(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`)
+
+    const username = "user";
+    const pass = "password"
+    const b64 = btoa(`${username}:${pass}`)
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Basic ${b64}` 
+    });
+
+
+    return this.http.get<any>(`${this.apiUrl}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`,
+      {headers}
+    )
       .pipe(
         catchError(this.handleError<any[]>('getItems', []))
       );
@@ -24,7 +36,18 @@ export class CharacterService {
 
   // GET request with id
   getCharacterId(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${id}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`)
+
+    const username = "user";
+    const pass = "password"
+    const b64 = btoa(`${username}:${pass}`)
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Basic ${b64}` 
+    });
+
+    return this.http.get<any>(`${this.apiUrl}/${id}?ts=1&apikey=${this.apiKey}&hash=0a90c2d5bd62beb282a14ffe552b3f7c`
+      ,{headers}
+    )
       .pipe(
         catchError(this.handleError<any>('getItem'))
       );
