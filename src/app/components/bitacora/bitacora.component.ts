@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { bitacora } from 'src/app/models/bitacora.model';
+import { Bitacora } from 'src/app/models/bitacora.model';
+import { BitacoraService } from '../../services/bitacora.service';
 
 @Component({
   selector: 'app-bitacora',
@@ -10,15 +11,19 @@ export class BitacoraComponent implements OnInit {
 
 
   displayedColumns: string[] = ['servicio', 'fecha'];
-  constructor() { }
+  constructor(private bitacoraService: BitacoraService) { }
 
   ngOnInit(): void {
+
+    this.bitacoraService.getAllBitacora().subscribe(
+      data => {
+        this.bitacora = data
+      }
+    )
   }
 
-  bitacora: bitacora[] = [
-    { servicio: 'Servicio A', fecha: '2024-05-31' },
-    { servicio: 'Servicio B', fecha: '2024-05-30' },
-    { servicio: 'Servicio C', fecha: '2024-05-29' }
+  bitacora: Bitacora[] = [
   ];
+
 
 }

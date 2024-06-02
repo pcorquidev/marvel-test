@@ -1,4 +1,4 @@
-export interface bitacora{
-    servicio: string;
-    fecha: string;
+export interface Bitacora{
+    service: string;
+    date: string;
 }
