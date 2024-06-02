@@ -1,0 +1,13 @@
+
+<div class="centered-text">
+
+    <h1>Characters</h1>
+    <p>Select a Character</p>
+</div>
+<div class="item-list">
+    <div *ngFor="let character of results" class="item" (click)="openPopup(character.id)">
+        <img class="size-image" [src]="character.thumbnail.path + '.' + character.thumbnail.extension"
+            alt="{{ character.name }}">
+        <p>{{ character.name }}</p>
+    </div>
+</div>
