@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: "http://gateway.marvel.com/v1/public/characters",
+  api: "http://localhost:8080/api",
   apikey: "a849861b78fe8e15ea275dd5e41d4cbf"
 };
 
