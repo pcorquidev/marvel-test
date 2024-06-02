@@ -10,6 +10,7 @@ import { BitacoraComponent } from './components/bitacora/bitacora.component';
 import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { SuperlistComponent } from './components/superlist/superlist.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SuperlistComponent } from './components/superlist/superlist.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
