@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BitacoraComponent } from './components/bitacora/bitacora.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PopupComponent
+    PopupComponent,
+    BitacoraComponent
   ],
   imports: [
     BrowserModule,
