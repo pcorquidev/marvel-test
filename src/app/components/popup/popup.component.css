@@ -1,0 +1,11 @@
+.style-popup {
+    padding: 1rem;
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold;  /* Pone el texto en negritas */
+  }
+  
+  .size-image {
+    width: 200px;
+    height: 300px
+  }
+  
